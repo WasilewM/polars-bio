@@ -6,6 +6,12 @@ use log::{debug, info};
 use sequila_core::session_context::{Algorithm, SequilaConfig};
 use tokio::runtime::Runtime;
 
+use arrow::array::{Int64Array, Float64Array, StringArray};
+use arrow::datatypes::{Schema, Field, DataType};
+use arrow::record_batch::RecordBatch;
+use datafusion::prelude::SessionContext;
+use arrow_array::Array;
+
 use crate::context::set_option_internal;
 use crate::option::{FilterOp, RangeOp, RangeOptions};
 use crate::query::{count_overlaps_query, nearest_query, overlap_query};
@@ -189,6 +195,60 @@ async fn do_count_overlaps_coverage_naive(
     let query = format!("SELECT * FROM {}", table_name);
     debug!("Query: {}", query);
     ctx.sql(&query).await.unwrap()
+}
+
+
+async fn do_base_sequance_quality(
+    ctx: &ExonSession,
+    table: String,
+) -> datafusion::dataframe::DataFrame {
+    let query = format!("SELECT quality_scores FROM {}", table);
+    let batches = ctx.sql(&query).await.unwrap().collect().await.unwrap();
+
+    let mut positions = Vec::new();
+    let mut scores = Vec::new();
+
+    for batch in batches {
+        let col_idx = batch
+            .schema().
+            fields().
+            iter().
+            position(|f| f.name() == "quality_scores").unwrap();
+        let array = batch.column(col_idx);
+
+        if let Some(string_array) = array.as_any().downcast_ref::<StringArray>() {
+            for i in 0..string_array.len() {
+                if string_array.is_null(i) {
+                    continue;
+                }
+                let quality_str = string_array.value(i);
+                for (pos, qchar) in quality_str.chars().enumerate() {
+                    positions.push(pos as i64);
+                    scores.push(qchar as u8 as f64 - 33.0);
+                }
+            }
+        } else {
+            panic!("Unsupported array type for quality_scores column");
+        }
+    }
+
+    let pos_array = Int64Array::from(positions);
+    let score_array = Float64Array::from(scores);
+
+    let schema = Schema::new(vec![
+        Field::new("position", DataType::Int64, false),
+        Field::new("score", DataType::Float64, false),
+    ]);
+
+    let batch = RecordBatch::try_new(
+        Arc::new(schema),
+        vec![Arc::new(pos_array), Arc::new(score_array)],
+    ).unwrap();
+
+    let ctx = SessionContext::new();
+    let df = ctx.read_batch(batch).unwrap();
+
+    df
 }
 
 async fn get_non_join_columns(
