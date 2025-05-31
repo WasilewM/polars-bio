@@ -11,6 +11,8 @@ use arrow::datatypes::{Schema, Field, DataType};
 use arrow::record_batch::RecordBatch;
 use datafusion::prelude::SessionContext;
 use arrow_array::Array;
+use datafusion::datasource::MemTable;
+use datafusion::common::DFSchema;
 
 use crate::context::set_option_internal;
 use crate::option::{FilterOp, RangeOp, RangeOptions};
@@ -198,7 +200,7 @@ async fn do_count_overlaps_coverage_naive(
 }
 
 
-async fn do_base_sequance_quality(
+async fn do_base_sequence_quality(
     ctx: &ExonSession,
     table: String,
 ) -> datafusion::dataframe::DataFrame {
@@ -251,7 +253,19 @@ async fn do_base_sequance_quality(
     df
 }
 
-async fn get_non_join_columns(
+pub async fn run_and_register_base_quality(
+    ctx: &ExonSession,
+    table: String
+) -> Result<(), Box<dyn std::error::Error>> {
+    let df = do_base_sequence_quality(ctx, table).await;
+    let batches = df.clone().collect().await?;
+    let arrow_schema = Arc::new(<DFSchema as AsRef<arrow::datatypes::Schema>>::as_ref(df.schema()).clone());
+    let mem_table = MemTable::try_new(arrow_schema, vec![batches])?;
+    ctx.session.register_table("sequence_quality_result", Arc::new(mem_table))?;
+    Ok(())
+}
+
+pub async fn get_non_join_columns(
     table_name: String,
     join_columns: Vec<String>,
     ctx: &ExonSession,
