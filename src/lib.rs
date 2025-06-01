@@ -6,6 +6,7 @@ mod scan;
 mod streaming;
 mod udtf;
 mod utils;
+mod base_quality_udtf;
 
 use std::string::ToString;
 use std::sync::{Arc, Mutex};

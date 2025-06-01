@@ -253,6 +253,15 @@ async fn do_base_sequence_quality(
     df
 }
 
+pub async fn do_base_sequence_quality_as_batches<E>(
+    ctx: &ExonSession,
+    table: &str,
+) -> Result<Vec<RecordBatch>, E> {
+    let df = do_base_sequence_quality(ctx, table.to_string()).await;
+    let batches = df.collect().await?;
+    Ok(batches)
+}
+
 pub async fn run_and_register_base_quality(
     ctx: &ExonSession,
     table: String

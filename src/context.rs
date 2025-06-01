@@ -1,5 +1,8 @@
 use std::collections::HashMap;
 
+use crate::base_quality_udtf::BaseSequenceQualityUdtf;
+use crate::Arc;
+
 use datafusion::config::ConfigOptions;
 use datafusion::prelude::SessionConfig;
 use exon::config::ExonConfigExtension;
@@ -25,6 +28,9 @@ impl PyBioSessionContext {
     pub fn new(seed: String, catalog_dir: String) -> PyResult<Self> {
         let ctx = create_context().unwrap();
         let session_config: HashMap<String, String> = HashMap::new();
+
+        // Register User Defined Table Functions 
+        ctx.session.register_udtf("do_base_sequence_quality", Arc::new(BaseSequenceQualityUdtf));
 
         Ok(PyBioSessionContext {
             ctx,
