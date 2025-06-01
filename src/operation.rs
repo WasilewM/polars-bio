@@ -13,6 +13,7 @@ use datafusion::prelude::SessionContext;
 use arrow_array::Array;
 use datafusion::datasource::MemTable;
 use datafusion::common::DFSchema;
+use datafusion::error::Result;
 
 use crate::context::set_option_internal;
 use crate::option::{FilterOp, RangeOp, RangeOptions};
@@ -256,10 +257,10 @@ async fn do_base_sequence_quality(
 pub async fn do_base_sequence_quality_as_batches<E>(
     ctx: &ExonSession,
     table: &str,
-) -> Result<Vec<RecordBatch>, E> {
+) -> Result<Vec<RecordBatch>> {
     let df = do_base_sequence_quality(ctx, table.to_string()).await;
-    let batches = df.collect().await?;
-    Ok(batches)
+    let batches = df.collect().await;
+    batches
 }
 
 pub async fn run_and_register_base_quality(

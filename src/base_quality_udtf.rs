@@ -9,9 +9,15 @@ use exon::ExonSession;
 
 use crate::operation::do_base_sequence_quality_as_batches;
 
-#[derive(Debug)]
 pub struct BaseSequenceQualityUdtf {
-    ctx: Arc<ExonSession>,
+    ctx: ExonSession,
+}
+
+impl std::fmt::Debug for BaseSequenceQualityUdtf {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.debug_struct("BaseSequenceQualityUdtf")
+            .finish()
+    }
 }
 
 impl TableFunctionImpl for BaseSequenceQualityUdtf {

@@ -30,7 +30,7 @@ impl PyBioSessionContext {
         let session_config: HashMap<String, String> = HashMap::new();
 
         // Register User Defined Table Functions 
-        ctx.session.register_udtf("do_base_sequence_quality", Arc::new(BaseSequenceQualityUdtf));
+        ctx.session.register_udtf("do_base_sequence_quality", Arc::new(BaseSequenceQualityUdtf { ctx: exon::ExonSession { session: ctx.session.clone() } }));
 
         Ok(PyBioSessionContext {
             ctx,
