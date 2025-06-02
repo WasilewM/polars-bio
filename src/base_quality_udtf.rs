@@ -10,7 +10,7 @@ use exon::ExonSession;
 use crate::operation::do_base_sequence_quality_as_batches;
 
 pub struct BaseSequenceQualityUdtf {
-    ctx: ExonSession,
+    pub ctx: ExonSession,
 }
 
 impl std::fmt::Debug for BaseSequenceQualityUdtf {

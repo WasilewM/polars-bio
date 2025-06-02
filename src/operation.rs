@@ -254,7 +254,7 @@ async fn do_base_sequence_quality(
     df
 }
 
-pub async fn do_base_sequence_quality_as_batches<E>(
+pub async fn do_base_sequence_quality_as_batches(
     ctx: &ExonSession,
     table: &str,
 ) -> Result<Vec<RecordBatch>> {
