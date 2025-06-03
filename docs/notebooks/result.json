@@ -1,0 +1,1024 @@
+{
+    "data": {
+        "values": [
+            {
+                "average": 30.135,
+                "lower": 26.5,
+                "median": 33,
+                "pos": 0,
+                "q1": 31,
+                "q3": 34,
+                "upper": 38.5
+            },
+            {
+                "average": 35.99,
+                "lower": 26.875,
+                "median": 38,
+                "pos": 61,
+                "q1": 34.75,
+                "q3": 40,
+                "upper": 47.875
+            },
+            {
+                "average": 37.55,
+                "lower": 30,
+                "median": 39,
+                "pos": 55,
+                "q1": 36,
+                "q3": 40,
+                "upper": 46
+            },
+            {
+                "average": 37.21,
+                "lower": 30,
+                "median": 39,
+                "pos": 49,
+                "q1": 36,
+                "q3": 40,
+                "upper": 46
+            },
+            {
+                "average": 37.775,
+                "lower": 35,
+                "median": 40,
+                "pos": 43,
+                "q1": 38,
+                "q3": 40,
+                "upper": 43
+            },
+            {
+                "average": 38,
+                "lower": 35,
+                "median": 40,
+                "pos": 37,
+                "q1": 38,
+                "q3": 40,
+                "upper": 43
+            },
+            {
+                "average": 31.55,
+                "lower": 27.5,
+                "median": 34,
+                "pos": 98,
+                "q1": 32,
+                "q3": 35,
+                "upper": 39.5
+            },
+            {
+                "average": 38.795,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 31,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 31.835,
+                "lower": 27.5,
+                "median": 35,
+                "pos": 92,
+                "q1": 32,
+                "q3": 35,
+                "upper": 39.5
+            },
+            {
+                "average": 38.2,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 25,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 31.815,
+                "lower": 30,
+                "median": 35,
+                "pos": 86,
+                "q1": 33,
+                "q3": 35,
+                "upper": 38
+            },
+            {
+                "average": 38.425,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 19,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 32.61,
+                "lower": 26,
+                "median": 35,
+                "pos": 80,
+                "q1": 32,
+                "q3": 36,
+                "upper": 42
+            },
+            {
+                "average": 38.94,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 13,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 30.83,
+                "lower": 24.5,
+                "median": 35,
+                "pos": 74,
+                "q1": 32,
+                "q3": 37,
+                "upper": 44.5
+            },
+            {
+                "average": 35.4,
+                "lower": 32,
+                "median": 36,
+                "pos": 7,
+                "q1": 35,
+                "q3": 37,
+                "upper": 40
+            },
+            {
+                "average": 35.91,
+                "lower": 26.5,
+                "median": 36,
+                "pos": 68,
+                "q1": 34,
+                "q3": 39,
+                "upper": 46.5
+            },
+            {
+                "average": 31.21,
+                "lower": 26.5,
+                "median": 34,
+                "pos": 1,
+                "q1": 31,
+                "q3": 34,
+                "upper": 38.5
+            },
+            {
+                "average": 36.145,
+                "lower": 26.875,
+                "median": 38,
+                "pos": 62,
+                "q1": 34.75,
+                "q3": 40,
+                "upper": 47.875
+            },
+            {
+                "average": 37.59,
+                "lower": 30,
+                "median": 39,
+                "pos": 56,
+                "q1": 36,
+                "q3": 40,
+                "upper": 46
+            },
+            {
+                "average": 37.425,
+                "lower": 27.875,
+                "median": 39,
+                "pos": 50,
+                "q1": 35.75,
+                "q3": 41,
+                "upper": 48.875
+            },
+            {
+                "average": 37.565,
+                "lower": 31,
+                "median": 40,
+                "pos": 44,
+                "q1": 37,
+                "q3": 41,
+                "upper": 47
+            },
+            {
+                "average": 37.64,
+                "lower": 32.875,
+                "median": 40,
+                "pos": 38,
+                "q1": 37.75,
+                "q3": 41,
+                "upper": 45.875
+            },
+            {
+                "average": 31.25,
+                "lower": 27.5,
+                "median": 34,
+                "pos": 99,
+                "q1": 32,
+                "q3": 35,
+                "upper": 39.5
+            },
+            {
+                "average": 38.29,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 32,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 31.05,
+                "lower": 27.5,
+                "median": 34,
+                "pos": 93,
+                "q1": 32,
+                "q3": 35,
+                "upper": 39.5
+            },
+            {
+                "average": 37.855,
+                "lower": 35,
+                "median": 40,
+                "pos": 26,
+                "q1": 38,
+                "q3": 40,
+                "upper": 43
+            },
+            {
+                "average": 31.915,
+                "lower": 27.5,
+                "median": 35,
+                "pos": 87,
+                "q1": 32,
+                "q3": 35,
+                "upper": 39.5
+            },
+            {
+                "average": 38.625,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 20,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 32.76,
+                "lower": 28.5,
+                "median": 35,
+                "pos": 81,
+                "q1": 33,
+                "q3": 36,
+                "upper": 40.5
+            },
+            {
+                "average": 38.965,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 14,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 31.06,
+                "lower": 21.375,
+                "median": 35,
+                "pos": 75,
+                "q1": 30.75,
+                "q3": 37,
+                "upper": 46.375
+            },
+            {
+                "average": 37.625,
+                "lower": 34,
+                "median": 39,
+                "pos": 8,
+                "q1": 37,
+                "q3": 39,
+                "upper": 42
+            },
+            {
+                "average": 33.7,
+                "lower": 26.5,
+                "median": 36,
+                "pos": 69,
+                "q1": 34,
+                "q3": 39,
+                "upper": 46.5
+            },
+            {
+                "average": 32.015,
+                "lower": 26.5,
+                "median": 34,
+                "pos": 2,
+                "q1": 31,
+                "q3": 34,
+                "upper": 38.5
+            },
+            {
+                "average": 36.25,
+                "lower": 27.5,
+                "median": 38,
+                "pos": 63,
+                "q1": 35,
+                "q3": 40,
+                "upper": 47.5
+            },
+            {
+                "average": 37.35,
+                "lower": 30,
+                "median": 39,
+                "pos": 57,
+                "q1": 36,
+                "q3": 40,
+                "upper": 46
+            },
+            {
+                "average": 37.53,
+                "lower": 28.5,
+                "median": 39,
+                "pos": 51,
+                "q1": 36,
+                "q3": 41,
+                "upper": 48.5
+            },
+            {
+                "average": 37.45,
+                "lower": 28.5,
+                "median": 40,
+                "pos": 45,
+                "q1": 36,
+                "q3": 41,
+                "upper": 48.5
+            },
+            {
+                "average": 37.895,
+                "lower": 35,
+                "median": 40,
+                "pos": 39,
+                "q1": 38,
+                "q3": 40,
+                "upper": 43
+            },
+            {
+                "average": 31.105,
+                "lower": 25,
+                "median": 34,
+                "pos": 100,
+                "q1": 31,
+                "q3": 35,
+                "upper": 41
+            },
+            {
+                "average": 38.245,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 33,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 30.775,
+                "lower": 27.5,
+                "median": 34,
+                "pos": 94,
+                "q1": 32,
+                "q3": 35,
+                "upper": 39.5
+            },
+            {
+                "average": 38.44,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 27,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 32.065,
+                "lower": 30,
+                "median": 35,
+                "pos": 88,
+                "q1": 33,
+                "q3": 35,
+                "upper": 38
+            },
+            {
+                "average": 38.445,
+                "lower": 35,
+                "median": 40,
+                "pos": 21,
+                "q1": 38,
+                "q3": 40,
+                "upper": 43
+            },
+            {
+                "average": 31.525,
+                "lower": 29.625,
+                "median": 35,
+                "pos": 82,
+                "q1": 33,
+                "q3": 35.25,
+                "upper": 38.625
+            },
+            {
+                "average": 38.725,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 15,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 30.265,
+                "lower": 21.375,
+                "median": 35,
+                "pos": 76,
+                "q1": 30.75,
+                "q3": 37,
+                "upper": 46.375
+            },
+            {
+                "average": 37.36,
+                "lower": 34,
+                "median": 39,
+                "pos": 9,
+                "q1": 37,
+                "q3": 39,
+                "upper": 42
+            },
+            {
+                "average": 33.565,
+                "lower": 28,
+                "median": 35,
+                "pos": 70,
+                "q1": 34,
+                "q3": 38,
+                "upper": 44
+            },
+            {
+                "average": 35.69,
+                "lower": 32,
+                "median": 37,
+                "pos": 3,
+                "q1": 35,
+                "q3": 37,
+                "upper": 40
+            },
+            {
+                "average": 36.095,
+                "lower": 27.5,
+                "median": 37,
+                "pos": 64,
+                "q1": 35,
+                "q3": 40,
+                "upper": 47.5
+            },
+            {
+                "average": 36.77,
+                "lower": 27.5,
+                "median": 38,
+                "pos": 58,
+                "q1": 35,
+                "q3": 40,
+                "upper": 47.5
+            },
+            {
+                "average": 37.77,
+                "lower": 32.5,
+                "median": 39,
+                "pos": 52,
+                "q1": 37,
+                "q3": 40,
+                "upper": 44.5
+            },
+            {
+                "average": 37.79,
+                "lower": 31,
+                "median": 39.5,
+                "pos": 46,
+                "q1": 37,
+                "q3": 41,
+                "upper": 47
+            },
+            {
+                "average": 37.95,
+                "lower": 34.375,
+                "median": 40,
+                "pos": 40,
+                "q1": 37.75,
+                "q3": 40,
+                "upper": 43.375
+            },
+            {
+                "average": 38.205,
+                "lower": 32.875,
+                "median": 40,
+                "pos": 34,
+                "q1": 37.75,
+                "q3": 41,
+                "upper": 45.875
+            },
+            {
+                "average": 31.425,
+                "lower": 27.5,
+                "median": 34,
+                "pos": 95,
+                "q1": 32,
+                "q3": 35,
+                "upper": 39.5
+            },
+            {
+                "average": 38.445,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 28,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 32.44,
+                "lower": 30,
+                "median": 35,
+                "pos": 89,
+                "q1": 33,
+                "q3": 35,
+                "upper": 38
+            },
+            {
+                "average": 38.41,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 22,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 32.03,
+                "lower": 30,
+                "median": 35,
+                "pos": 83,
+                "q1": 33,
+                "q3": 35,
+                "upper": 38
+            },
+            {
+                "average": 38.48,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 16,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 30.805,
+                "lower": 21,
+                "median": 35,
+                "pos": 77,
+                "q1": 30,
+                "q3": 36,
+                "upper": 45
+            },
+            {
+                "average": 37.675,
+                "lower": 34,
+                "median": 39,
+                "pos": 10,
+                "q1": 37,
+                "q3": 39,
+                "upper": 42
+            },
+            {
+                "average": 33.005,
+                "lower": 25.5,
+                "median": 35,
+                "pos": 71,
+                "q1": 33,
+                "q3": 38,
+                "upper": 45.5
+            },
+            {
+                "average": 35.68,
+                "lower": 32,
+                "median": 37,
+                "pos": 4,
+                "q1": 35,
+                "q3": 37,
+                "upper": 40
+            },
+            {
+                "average": 35.995,
+                "lower": 29,
+                "median": 37,
+                "pos": 65,
+                "q1": 35,
+                "q3": 39,
+                "upper": 45
+            },
+            {
+                "average": 36.08,
+                "lower": 27.5,
+                "median": 38,
+                "pos": 59,
+                "q1": 35,
+                "q3": 40,
+                "upper": 47.5
+            },
+            {
+                "average": 37.845,
+                "lower": 32.125,
+                "median": 39,
+                "pos": 53,
+                "q1": 37,
+                "q3": 40.25,
+                "upper": 45.125
+            },
+            {
+                "average": 37.665,
+                "lower": 31,
+                "median": 39,
+                "pos": 47,
+                "q1": 37,
+                "q3": 41,
+                "upper": 47
+            },
+            {
+                "average": 37.87,
+                "lower": 31,
+                "median": 40,
+                "pos": 41,
+                "q1": 37,
+                "q3": 41,
+                "upper": 47
+            },
+            {
+                "average": 38.385,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 35,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 31.315,
+                "lower": 27.5,
+                "median": 34,
+                "pos": 96,
+                "q1": 32,
+                "q3": 35,
+                "upper": 39.5
+            },
+            {
+                "average": 38.595,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 29,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 32.275,
+                "lower": 30,
+                "median": 34.5,
+                "pos": 90,
+                "q1": 33,
+                "q3": 35,
+                "upper": 38
+            },
+            {
+                "average": 38.635,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 23,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 32.415,
+                "lower": 30,
+                "median": 35,
+                "pos": 84,
+                "q1": 33,
+                "q3": 35,
+                "upper": 38
+            },
+            {
+                "average": 38.505,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 17,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 31.46,
+                "lower": 23.5,
+                "median": 35,
+                "pos": 78,
+                "q1": 31,
+                "q3": 36,
+                "upper": 43.5
+            },
+            {
+                "average": 37.71,
+                "lower": 34,
+                "median": 39,
+                "pos": 11,
+                "q1": 37,
+                "q3": 39,
+                "upper": 42
+            },
+            {
+                "average": 33.265,
+                "lower": 27,
+                "median": 35,
+                "pos": 72,
+                "q1": 33,
+                "q3": 37,
+                "upper": 43
+            },
+            {
+                "average": 35.095,
+                "lower": 32,
+                "median": 35,
+                "pos": 5,
+                "q1": 35,
+                "q3": 37,
+                "upper": 40
+            },
+            {
+                "average": 35.875,
+                "lower": 29,
+                "median": 37,
+                "pos": 66,
+                "q1": 35,
+                "q3": 39,
+                "upper": 45
+            },
+            {
+                "average": 35.985,
+                "lower": 27.5,
+                "median": 38,
+                "pos": 60,
+                "q1": 35,
+                "q3": 40,
+                "upper": 47.5
+            },
+            {
+                "average": 37.59,
+                "lower": 28.5,
+                "median": 39.5,
+                "pos": 54,
+                "q1": 36,
+                "q3": 41,
+                "upper": 48.5
+            },
+            {
+                "average": 37.61,
+                "lower": 28.5,
+                "median": 40,
+                "pos": 48,
+                "q1": 36,
+                "q3": 41,
+                "upper": 48.5
+            },
+            {
+                "average": 37.78,
+                "lower": 32.5,
+                "median": 40,
+                "pos": 42,
+                "q1": 37,
+                "q3": 40,
+                "upper": 44.5
+            },
+            {
+                "average": 38.11,
+                "lower": 35,
+                "median": 40,
+                "pos": 36,
+                "q1": 38,
+                "q3": 40,
+                "upper": 43
+            },
+            {
+                "average": 30.67,
+                "lower": 25,
+                "median": 34,
+                "pos": 97,
+                "q1": 31,
+                "q3": 35,
+                "upper": 41
+            },
+            {
+                "average": 38.245,
+                "lower": 35,
+                "median": 40,
+                "pos": 30,
+                "q1": 38,
+                "q3": 40,
+                "upper": 43
+            },
+            {
+                "average": 32.665,
+                "lower": 27.5,
+                "median": 35,
+                "pos": 91,
+                "q1": 32,
+                "q3": 35,
+                "upper": 39.5
+            },
+            {
+                "average": 38.265,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 24,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 32.195,
+                "lower": 29.375,
+                "median": 35,
+                "pos": 85,
+                "q1": 32.75,
+                "q3": 35,
+                "upper": 38.375
+            },
+            {
+                "average": 38.47,
+                "lower": 33.5,
+                "median": 40,
+                "pos": 18,
+                "q1": 38,
+                "q3": 41,
+                "upper": 45.5
+            },
+            {
+                "average": 32.46,
+                "lower": 25.375,
+                "median": 35,
+                "pos": 79,
+                "q1": 31.75,
+                "q3": 36,
+                "upper": 42.375
+            },
+            {
+                "average": 37.5,
+                "lower": 34,
+                "median": 39,
+                "pos": 12,
+                "q1": 37,
+                "q3": 39,
+                "upper": 42
+            },
+            {
+                "average": 32.68,
+                "lower": 27,
+                "median": 35,
+                "pos": 73,
+                "q1": 33,
+                "q3": 37,
+                "upper": 43
+            },
+            {
+                "average": 35.145,
+                "lower": 32,
+                "median": 35,
+                "pos": 6,
+                "q1": 35,
+                "q3": 37,
+                "upper": 40
+            },
+            {
+                "average": 35.96,
+                "lower": 26.5,
+                "median": 36.5,
+                "pos": 67,
+                "q1": 34,
+                "q3": 39,
+                "upper": 46.5
+            }
+        ]
+    },
+    "encoding": {
+        "tooltip": [
+            {
+                "field": "pos",
+                "title": "Position in read (bp)"
+            },
+            {
+                "field": "average",
+                "title": "Average of phred score"
+            },
+            {
+                "field": "upper",
+                "title": "Max of phred score"
+            },
+            {
+                "field": "q3",
+                "title": "Q3 of phred score"
+            },
+            {
+                "field": "median",
+                "title": "Median of phred score"
+            },
+            {
+                "field": "q1",
+                "title": "Q1 of phred score"
+            },
+            {
+                "field": "lower",
+                "title": "Min of phred score"
+            }
+        ],
+        "y": {
+            "field": "pos",
+            "title": "Position in read (bp)",
+            "type": "nominal"
+        }
+    },
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "lower",
+                    "scale": {
+                        "zero": false
+                    },
+                    "title": null,
+                    "type": "quantitative"
+                },
+                "x2": {
+                    "field": "upper"
+                }
+            },
+            "mark": {
+                "type": "rule"
+            }
+        },
+        {
+            "encoding": {
+                "color": {
+                    "value": "#54785a"
+                },
+                "x": {
+                    "field": "q1",
+                    "type": "quantitative"
+                },
+                "x2": {
+                    "field": "q3"
+                }
+            },
+            "mark": {
+                "size": 14,
+                "type": "bar"
+            }
+        },
+        {
+            "encoding": {
+                "x": {
+                    "field": "median",
+                    "type": "quantitative"
+                }
+            },
+            "mark": {
+                "color": "white",
+                "size": 14,
+                "type": "tick"
+            }
+        },
+        {
+            "encoding": {
+                "color": {
+                    "value": "red"
+                },
+                "x": {
+                    "field": "average",
+                    "scale": {
+                        "zero": false
+                    },
+                    "title": "Phred score",
+                    "type": "quantitative"
+                }
+            },
+            "mark": {
+                "interpolate": "basis",
+                "type": "line"
+            }
+        }
+    ],
+    "title": "Phred score",
+    "width": 500
+}
