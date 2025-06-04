@@ -6,6 +6,15 @@ use log::{debug, info};
 use sequila_core::session_context::{Algorithm, SequilaConfig};
 use tokio::runtime::Runtime;
 
+use arrow::array::{Int64Array, Float64Array, StringArray};
+use arrow::datatypes::{Schema, Field, DataType};
+use arrow::record_batch::RecordBatch;
+use datafusion::prelude::SessionContext;
+use arrow_array::Array;
+use datafusion::datasource::MemTable;
+use datafusion::common::DFSchema;
+use datafusion::error::Result;
+
 use crate::context::set_option_internal;
 use crate::option::{FilterOp, RangeOp, RangeOptions};
 use crate::query::{count_overlaps_query, nearest_query, overlap_query};
@@ -191,7 +200,82 @@ async fn do_count_overlaps_coverage_naive(
     ctx.sql(&query).await.unwrap()
 }
 
-async fn get_non_join_columns(
+
+async fn do_base_sequence_quality(
+    ctx: &ExonSession,
+    table: String,
+) -> datafusion::dataframe::DataFrame {
+    let query = format!("SELECT quality_scores FROM {}", table);
+    let batches = ctx.sql(&query).await.unwrap().collect().await.unwrap();
+
+    let mut positions = Vec::new();
+    let mut scores = Vec::new();
+
+    for batch in batches {
+        let col_idx = batch
+            .schema().
+            fields().
+            iter().
+            position(|f| f.name() == "quality_scores").unwrap();
+        let array = batch.column(col_idx);
+
+        if let Some(string_array) = array.as_any().downcast_ref::<StringArray>() {
+            for i in 0..string_array.len() {
+                if string_array.is_null(i) {
+                    continue;
+                }
+                let quality_str = string_array.value(i);
+                for (pos, qchar) in quality_str.chars().enumerate() {
+                    positions.push(pos as i64);
+                    scores.push(qchar as u8 as f64 - 33.0);
+                }
+            }
+        } else {
+            panic!("Unsupported array type for quality_scores column");
+        }
+    }
+
+    let pos_array = Int64Array::from(positions);
+    let score_array = Float64Array::from(scores);
+
+    let schema = Schema::new(vec![
+        Field::new("position", DataType::Int64, false),
+        Field::new("score", DataType::Float64, false),
+    ]);
+
+    let batch = RecordBatch::try_new(
+        Arc::new(schema),
+        vec![Arc::new(pos_array), Arc::new(score_array)],
+    ).unwrap();
+
+    let ctx = SessionContext::new();
+    let df = ctx.read_batch(batch).unwrap();
+
+    df
+}
+
+pub async fn do_base_sequence_quality_as_batches(
+    ctx: &ExonSession,
+    table: &str,
+) -> Result<Vec<RecordBatch>> {
+    let df = do_base_sequence_quality(ctx, table.to_string()).await;
+    let batches = df.collect().await;
+    batches
+}
+
+pub async fn run_and_register_base_quality(
+    ctx: &ExonSession,
+    table: String
+) -> Result<(), Box<dyn std::error::Error>> {
+    let df = do_base_sequence_quality(ctx, table).await;
+    let batches = df.clone().collect().await?;
+    let arrow_schema = Arc::new(<DFSchema as AsRef<arrow::datatypes::Schema>>::as_ref(df.schema()).clone());
+    let mem_table = MemTable::try_new(arrow_schema, vec![batches])?;
+    ctx.session.register_table("sequence_quality_result", Arc::new(mem_table))?;
+    Ok(())
+}
+
+pub async fn get_non_join_columns(
     table_name: String,
     join_columns: Vec<String>,
     ctx: &ExonSession,

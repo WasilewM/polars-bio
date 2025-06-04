@@ -6,6 +6,7 @@ mod scan;
 mod streaming;
 mod udtf;
 mod utils;
+mod base_quality_udtf;
 
 use std::string::ToString;
 use std::sync::{Arc, Mutex};
@@ -21,6 +22,7 @@ use polars_python::error::PyPolarsErr;
 use polars_python::lazyframe::PyLazyFrame;
 use pyo3::prelude::*;
 use tokio::runtime::Runtime;
+use operation::run_and_register_base_quality;
 
 use crate::context::PyBioSessionContext;
 use crate::operation::do_range_operation;
@@ -403,6 +405,22 @@ fn py_from_polars(
     })
 }
 
+#[pyfunction]
+#[pyo3(signature = (py_ctx, table))]
+fn py_run_and_register_base_quality(
+    py: Python<'_>,
+    py_ctx: &PyBioSessionContext,
+    table: String,
+) -> PyResult<()> {
+    py.allow_threads(|| {
+        let rt = Runtime::new().unwrap();
+        let ctx = &py_ctx.ctx;
+        rt.block_on(run_and_register_base_quality(ctx, table)).unwrap();
+        Ok(())
+    })
+}
+
+
 #[pymodule]
 fn polars_bio(_py: Python, m: &Bound<PyModule>) -> PyResult<()> {
     pyo3_log::init();
@@ -417,6 +435,7 @@ fn polars_bio(_py: Python, m: &Bound<PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(py_describe_vcf, m)?)?;
     m.add_function(wrap_pyfunction!(py_register_view, m)?)?;
     m.add_function(wrap_pyfunction!(py_from_polars, m)?)?;
+    m.add_function(wrap_pyfunction!(py_run_and_register_base_quality, m)?)?;
     // m.add_function(wrap_pyfunction!(unary_operation_scan, m)?)?;
     m.add_class::<PyBioSessionContext>()?;
     m.add_class::<FilterOp>()?;
